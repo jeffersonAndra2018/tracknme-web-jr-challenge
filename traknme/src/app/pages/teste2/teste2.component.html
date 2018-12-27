@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+
+<input type="date"  [(ngModel)]="data" /> <button (click)="getPosicoesByDate(data)">Inserir Data</button>
+
+<button  (click)="getPosicoes()">Consultar Posições</button>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="true" [maxZoom] = "50" [fullscreenControl] = "true" [streetViewControl] = "true">
+    <agm-direction [renderOptions]="renderOptions" [markerOptions]="markerOptions" [origin]="origin" [destination]="destination">
+    </agm-direction>
+  </agm-map>
+
